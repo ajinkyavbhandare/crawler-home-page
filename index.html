@@ -1,13 +1,93 @@
-<html><head>
-    <title>crawler.gnosight — Crawler</title>
-  </head>
-  
-  <body>
-    <h1>crawler.gnosight Crawler</h1>
-    <p>crawler.gnosight is a crawler written in Go for gnosight. It analyzes millions of public internet pages every month. We only crawl pages that are publicly accessible. Any page behind a login or any other authentication won't be crawled. Our goal with this crawler is to build business datasets and machine learning models to better understand the web.</p>
-    <p>This crawler follows robots.txt and meta instructions. We make sure our crawler doesn't add any noticeable load on websites we visit (usually, this means we'll never crawl more than one page at a time and one page every 2 seconds).</p>
-    <p>If for whatever reason, you wish to ban this crawler in particular, you should target the User Agent <em>crawler.gnosightPublicWebCrawler</em> in your robots.txt. We should pick up on this change within a few hours.</p>
-    <p>If you notice bugs or want to send us any feedback regarding the crawler, contact us at: <a href="mailto:engineering@crawler.gnosight.com">engineering@crawler.gnosight.com</a>.
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GnoSight Crawler</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container { max-width: 680px; width: 100%; }
+    h1 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 32px;
+      color: #fff;
+    }
+    p {
+      font-size: 15px;
+      color: #999;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+    .code-block {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: #7dd3a8;
+      margin: 12px 0 24px 0;
+      word-break: break-all;
+    }
+    a { color: #7dd3a8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
 
-</p></body></html>
+    <h1>GnoSight Crawler</h1>
+
+    <p>
+      GnoSight is a crawler that analyzes millions of public internet pages every month.
+      We only crawl pages that are publicly accessible. Any page behind a login or
+      any other authentication won't be crawled.
+    </p>
+
+    <p>
+      This crawler follows robots.txt and meta instructions. We make sure our crawler
+      doesn't add any noticeable load on websites we visit — usually this means we'll
+      never crawl more than one page at a time and one page every 2 seconds.
+    </p>
+
+    <hr/>
+
+    <p>
+      If you wish to ban this crawler, target the User Agent
+      <span style="color:#fff;">GnoSightCrawler</span> in your robots.txt:
+    </p>
+
+    <div class="code-block">
+      User-agent: GnoSightCrawler<br/>
+      Disallow: /
+    </div>
+
+    <p>We pick up on this change within a few hours.</p>
+
+    <hr/>
+
+    <p>
+      If you notice any issues or want to send feedback regarding the crawler,
+      contact us at: <a href="mailto:engineering.gnosight@gmail.com">engineering.gnosight@gmail.com</a>
+    </p>
+
+  </div>
+</body>
+</html>
